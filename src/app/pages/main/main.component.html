@@ -1,0 +1,21 @@
+
+<div class="container">
+  <!-- <app-lights></app-lights> -->
+  <div class="container__candies-recollected">
+    <app-candies-recollected></app-candies-recollected>
+  </div>
+
+  @if (showNewCandyPanel() === true) {
+    <candy-surprise-popup class="animate__animated animate__zoomInDown"></candy-surprise-popup>
+  }
+
+  <app-days-to-xmas></app-days-to-xmas>
+
+  <app-day></app-day>
+
+  @if (showCreateCandyPopup() === true) {
+    <!-- class="animate__animated animate__zoomInDown" -->
+    <app-create-candy-popup></app-create-candy-popup>
+  }
+
+</div>

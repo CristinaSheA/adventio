@@ -1,0 +1,16 @@
+<div class="container" *ngIf="appStateService.candies.length !== 0">
+  <h1>¡Genial, ganaste un {{appStateService.randomObj.name}}!</h1>
+  <img [src]="getImage()" alt="">
+  cantidad: {{appStateService.randomObj.quantity}}
+  <button (click)="closePanel()">¡Vale!</button>
+</div>
+
+<div class="container" *ngIf="appStateService.candies.length === 0">
+  <h1>No hay más caramelos disponibles</h1>
+  <button (click)="closePanel()">¡Vale!</button>
+</div>
+
+
+
+
+

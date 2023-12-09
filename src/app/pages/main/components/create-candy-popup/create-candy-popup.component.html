@@ -1,0 +1,29 @@
+<div class="container">
+
+  <label for="name">Nombre del caramelo</label>
+  <div class="field">
+    <input type="text" id="name" [(ngModel)]="name" />
+  </div>
+
+  <label for="image">Archivo</label>
+  <div class="field">
+    <input type="file" id="image" (change)="onFileChanged($event)" />
+  </div>
+
+  <label for="quantity">Cantidad</label>
+  <div class="field">
+    <div class="quantity">
+
+      <button class="quantity-button" (click)="decreaseCandyQuantity()">
+        <i class="fi fi-rr-square-minus"></i>
+      </button>
+
+      <input type="number" id="quantity" [(ngModel)]="quantity" />
+      <button class="quantity-button" (click)="increaseCandyQuantity()">
+        <i class="fi fi-rr-square-plus"></i>
+      </button>
+    </div>
+  </div>
+
+  <button class="submit" (click)="onSubmit()">¡Crear!</button>
+</div>

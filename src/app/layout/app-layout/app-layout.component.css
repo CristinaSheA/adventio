@@ -1,0 +1,29 @@
+* {
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1178px;
+  margin: 0 auto;
+}
+
+app-nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+
+.darker {
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+app-lights {
+  display: flex;
+}

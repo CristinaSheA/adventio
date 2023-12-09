@@ -1,0 +1,15 @@
+<div class="container">
+  <div
+    class="day"
+    *ngFor="let imagePath of randomImagePaths; index as i"
+    [class.active]="i + 1 === today"
+    (click)="showPanelIfToday(i + 1)"
+    [class.disabled]="openedDays[i]"
+  >
+  @if (openedDays[i]) {
+    <div *ngIf="openedDays[i]">{{ openedDays[i] }}</div>
+  } @else {
+    <img *ngIf="!openedDays[i]" [src]="imagePath" alt="" />
+  }
+  </div>
+</div>
